@@ -32,7 +32,7 @@ class SearchItem extends Component {
         let token = this.props.data.user.token;
         if (this.props.data.user.loggedIn) {
             axios({
-                url: "http://localhost:7000/games/add-favorite",
+                url: "https://zero-games-server.herokuapp.com/games/add-favorite",
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
