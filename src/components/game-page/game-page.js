@@ -19,7 +19,7 @@ class GamePage extends Component {
     }
 
     getGameById = () => {
-        axios.post('https://zero-games-server.herokuapp.com/get-games-by-id', { gameId: this.props.match.params.id })
+        axios.post('https://zero-games-server.herokuapp.com/games/get-games-by-id', { gameId: this.props.match.params.id })
             .then((result) => {
                 if (this._isMounted) {
                     this.setState({ game: result.data[0] })

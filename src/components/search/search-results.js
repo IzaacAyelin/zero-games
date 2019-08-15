@@ -117,7 +117,7 @@ class SearchResults extends Component {
                             else {
                                 cover = noimage;
                             }
-                            return <SearchItem key={game.id} game={game} cover={cover} />
+                            return <SearchItem key={game.id} genres={game.genres} game={game} cover={cover} />
                         })
                         )
                     }

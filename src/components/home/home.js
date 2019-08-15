@@ -4,12 +4,37 @@ import logo from '../../images/logo3.png';
 import GameCard from '../game-card/gameCard';
 import Carousel from '../carousel/carousel';
 import { Link } from "react-router-dom";
+import { query } from '../../api/apiActions';
+import noImage from '../../images/no-image.jpg';
 
 
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this._isMounted = false;
+        this.state = {
+            games: []
+        }
+    }
+
+    componentDidMount() {
+        this._isMounted = true;
+        query({
+            query: `limit 4;sort popularity desc; `,
+            offset: 0,
+            sort: ''
+        })
+            .then((result) => {
+                console.log(result.data);
+
+                this.setState({
+                    games: result.data
+                })
+            })
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {
@@ -28,7 +53,23 @@ class Home extends Component {
                 <div className="recent-games">
                     <h2 className="">Popular Games</h2>
                     <div className="row">
-                        <div className="col-md-3">
+                        {this.state.games.map((game) => {
+                            console.log(game);
+                            
+                            let cover;
+                            if (game.cover && game.cover.url) {
+                                cover = `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover.image_id}.jpg`;
+                            }
+                            else {
+                                cover = noImage;
+                            }
+                            return (<div key={game.id} className="col-md-3">
+                                <Link to={`/game/${game.id}`}>
+                                    <GameCard game={game} img={cover} />
+                                </Link>
+                            </div>)
+                        })}
+                        {/* <div className="col-md-3">
                             <Link to="/game/12345">
                                 <GameCard img="https://www.oxpal.com/wp-content/uploads/2014/08/gears_of_war_judgement_-_cover.jpg" />
                             </Link>
@@ -47,7 +88,7 @@ class Home extends Component {
                             <Link to="/game">
                                 <GameCard img="https://nerdiertides.files.wordpress.com/2016/07/watch-dogs-ubisoft-cover-art.jpg" />
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="recent-games">
