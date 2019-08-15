@@ -13,17 +13,19 @@ import Search from './components/search/search';
 import Favorites from './components/favorites/favorites';
 import { ConnectedProROute } from './components/protected-route/protected.route';
 import { About } from './components/about/about';
+import { Loader } from './components/loader/loader';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading:true
     }
   }
 
   componentDidMount() {
-    
+    setTimeout(()=>{this.setState({loading:false})},3000)
     let user = getUserFromLocalStorage();
     if (user) {
       verifyToken(user.token)
@@ -36,6 +38,9 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.state.loading) {
+        return<Loader/>
+    }
     return (
       
         <Router>
