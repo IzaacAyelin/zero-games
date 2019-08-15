@@ -1,0 +1,180 @@
+.loader{
+    position: fixed;
+    z-index: 10000;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+.loader img{
+    width: 200px;
+    height: 200px;
+}
+
+.game-page-container{
+    min-height: 40vh;
+    /* padding: 60px 0; */
+}
+
+.game-banner{
+    height:300px;
+    width: 100%;
+    /* background-image: url('../../images/crysis.jpg'); */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid #ffc107;
+}
+
+.game-page-layover{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5)
+}
+
+.game-page-flex{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    top: -50px;
+}
+
+
+
+.game-info{
+    width: 300px;
+    top: -40px;
+    position: relative;
+    
+}
+.game-info span, .game-summary span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.game-info img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.game-summary{
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+.game-summary .title{
+    position: relative;
+    top: -40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.game-summary .title h1{
+    color:white;
+}
+
+.game-summary .title span{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.game-info p, .game-summary p {
+    font-size: 18px
+}
+
+.screenshots{
+
+}
+
+.game-info .details{
+    border-left: 2px solid #ffc107;
+    padding: 5px;
+    height: fit-content;
+}
+
+
+.screenshots img{
+    display: inline-block;
+    width: 180px;
+    height: 100px;
+    margin: 5px;
+    box-shadow: 0 0 3px 2px silver;
+}
+
+@media only screen and (max-width: 992px) {
+    .game-page-flex{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 762px) {
+    .game-page-flex{
+       display: block;
+       top: -150px;
+    }
+    
+
+    .game-info .details{
+        position: relative;
+        top: 200px;
+        padding: 0 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .game-info img{
+        width: 250px;
+    }
+
+    .game-info {
+        width: 100%;
+        display: flex;
+    }
+    .game-summary .title h1 {
+        color: black;
+        font-size: 36px;
+    }
+    .game-summary{
+        padding: 0;
+    }
+
+    .screenshots img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .game-info .details{
+        position: static;
+        /* padding: 0; */
+        
+    }
+
+    .game-summary .title {
+        text-overflow: unset;
+        overflow: unset;
+        white-space: unset;
+    }
+    .game-summary .title span{
+        margin:5px;
+    }
+
+    .game-info img{
+        width: 100%;
+    }
+
+    .game-info{
+        display: block;
+    }
+}

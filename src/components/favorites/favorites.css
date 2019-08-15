@@ -1,0 +1,134 @@
+.favorites-header{
+    height: 300px;
+    width: 100%;
+    background-image: url('../../images/crysis.jpg');
+    background-size:cover;
+    background-position: center; 
+}
+
+.favorites-header .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+.favorites-header h1{
+    color: #ffc107;
+    font-family: 'Black Ops One';
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 80%;
+    margin: auto;
+}
+
+.favorites-container{
+    min-height: 300px;
+    width: 60%;
+    margin:auto;
+    background-color: #fff;
+    position: relative;
+    top: -100px;
+    box-shadow: 0 1px 7px rgba(0,0,0,.5);
+    padding: 10px;
+}
+
+.favorites-container .alert {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.item-info{
+    padding: 15px 0;
+}
+
+
+
+/* Item style */
+
+.favorite-item{
+    width: 100%;
+    height:200px;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    display: flex;
+    /* justify-content: center;
+    align-content: center; */
+}
+
+.favorite-item p {
+    color: #6c757d!important;
+    font-weight: 500;
+}
+
+.favorite-item .item-image img{
+    width: 120px;
+    /* height:200px; */
+}
+
+.favorite-item .item-image{
+    height: fit-content;
+    margin: auto 0;
+}
+
+.item-buttons{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dc3545;
+    font-size: 30px;
+}
+
+.item-buttons i {
+    cursor: pointer;
+}
+
+.left-col > div {
+    margin-left: 20px;
+}
+
+.left-col{
+    display: flex;
+    width: 70%;
+    padding: 10px;
+}
+.right-col{
+    width: 30%;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .favorites-container{
+        width: 95%;
+    }
+    .favorites-header h1{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .favorite-item .item-image img{
+        width: 80px;
+        /* height:200px; */
+    }
+    .item-info{
+        padding: 10px 0;
+    }
+    .left-col, .right-col{
+        padding: 5px 0;
+    }
+    .favorite-item{
+        height: 150px;
+    }
+
+    .left-col{
+        width: 85%;
+    }
+    .right-col{
+        width: 15%;
+    }
+}
+
+

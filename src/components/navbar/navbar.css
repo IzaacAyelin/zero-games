@@ -1,0 +1,204 @@
+
+.navbar{
+  color: white;
+  background-color: rgb(45,48,58);
+  font-family: 'Black Ops One';
+}
+.navbar .nav-brand{
+  background-color: #ffc107;
+  color:black;
+}
+
+.navbar .dropdown-menu{
+  margin:0;
+  padding: 0;
+  border: unset;
+  border-radius: unset;
+}
+
+.navbar .dropdown-menu .dropdown-divider{
+  margin: 0;
+}
+
+@media only screen and (min-width: 993px) {
+  .navbar .nav-scrolled-down{
+    background-color: white;
+  }
+  .navbar .nav-scrolled-down li a{
+    color:black;
+  }
+  .navbar .nav-scrolled-down li a:hover{
+    background-color: #ffc107;
+    /* color: white; */
+  }
+  .navbar .nav-scrolled-down li a:hover i{
+    color:black;
+  }
+  .navbar .dropdown-menu{
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,.3);
+  }
+  .login-link .dropdown-menu{
+    left:unset;
+    right:0;
+  }
+}
+
+
+.navbar ul{
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  transition: all 0.3s;
+}
+.login-link{
+  float: right;
+}
+
+.navbar ul li {
+  display:inline-block;
+}
+
+.navbar ul li a ,a:not([href]):not([tabindex]) {
+  color:#ffc107;
+  text-decoration: none;
+  display:block;
+  padding: 15px;
+  font-size: 20px;
+  /* border-bottom: 1px solid white; */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.navbar ul li a:hover,a:not([href]):not([tabindex]):hover {
+  text-decoration: none;
+  background-color: white;
+  color: rgb(45,48,58);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.navbar ul li a span{
+  margin-left: 10px;
+}
+
+.navbar ul li a i{
+  color:#ffc107;
+  width: 20px;
+}
+
+.navbar{
+  padding:0;
+  width:100%;
+  position: fixed;
+  background-color: transparent;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.7);
+  z-index: 999;
+}
+
+.nav-toggle{
+  display: none;
+  color: white;
+  box-shadow: 1px 1px 7px rgba(0,0,0,.7);
+}
+.nav-toggle i {
+  color:white;
+}
+
+/* מסך קטן */
+@media only screen and (max-width: 992px) {
+  .navbar{
+    width:70%;
+    color: white;
+    background-color: rgb(45,48,58);
+    position: fixed;
+    left:-70%;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    box-shadow: unset;
+  }
+  .dropdown-menu{
+    width: 100%;
+    position: static;
+    transition: all 0.3s;
+    float: none;
+  }
+
+  .login-link{
+    float:unset;
+  }
+
+  .nav-toggle{
+    font-size: 34px;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 10px;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  .nav-toggle-isOpen{
+    transform: translateX(250px);
+    color: black;
+  }
+
+  .navbar .nav-brand{
+    width:100%;
+    border-radius:0;
+    margin: 0;
+  }
+
+  .navbar ul{
+    height:100vh;
+    /* margin: 20px 0; */
+    /* display: none; */
+  }
+
+  .navbar-toggled{
+    width:300px;
+    color: white;
+    background-color: rgb(45,48,58);
+    position: fixed;
+    left:0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+
+
+  .navbar ul li {
+    display:block;
+    border-bottom: 1px solid#ffc107;
+  }
+
+  .navbar ul li a i {
+    margin-top:5px;
+    /* position:absolute; */
+  }
+
+  .navbar ul li a{
+    padding:10px;
+    font-size: 20px;
+    /* width:85%;
+    margin:5px auto;
+    border-radius:5px; */
+  }
+
+  .navbar ul li a span{
+    margin-left: 15px;
+  }
+  
+  
+  .navbar ul li a:hover {
+    background-color: rgba(0,0,0,.3);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+.bg-yellow{
+  background-color: #ffc107;
+}

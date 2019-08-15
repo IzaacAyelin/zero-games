@@ -1,0 +1,95 @@
+/* @import 'https://fonts.googleapis.com/css?family=Lobster Two'; */
+.about-container{
+    height: 100vh;
+    background-image: url('../../images/about.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.about-overlay{
+    background-color: rgba(0,0,0,.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-card{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.card-header{
+    height: 40%;
+    width: 100%;
+    padding: 0;
+    background-image: url('../../images/about-header.jpg');
+    background-position: center;
+    background-size: cover;
+    border: unset;
+    border-bottom: 2px solid rgb(255, 193, 7,1);
+}
+
+.header-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 193, 7,.3);
+}
+
+.card-image{
+    background-image: url('../../images/me.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid #ffc107;
+    position:absolute;
+    top: 100px;
+    left: calc(50% - 75px);
+}
+
+.about-card h1{
+    font-size: 32px;
+    font-family: 'Lobster Two';
+    color: rgba(255, 192, 5,1);
+}
+
+.about-card h2{
+    font-size: 18px;
+    color: rgba(255, 192, 5,.6);
+}
+
+.card-details{
+    margin-top: 80px;
+}
+.social-links{
+    font-size: 38px
+}
+.social-links i {
+    margin: 15px;
+    color: rgba(255, 192, 5,.6);
+    transition: all 0.3s;
+}
+.social-links i:hover {
+    margin: 15px;
+    color: rgba(255, 192, 5,1);
+    animation: rotation 1s;
+    
+}
+
+
+@media only screen and (max-width: 576px) {
+    .about-card{
+        width: 95%;
+    }
+}
+
+@keyframes rotation {
+    from {transform :rotate(0);}
+    to {transform :rotate(360deg);}
+  }

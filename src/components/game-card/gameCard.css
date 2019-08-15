@@ -1,0 +1,137 @@
+.card{
+  /* padding: 10px; */
+  overflow: hidden;
+  /* box-shadow: 0 0 3rem rgba(0, 0, 0, 0.23); */
+  transition: all 0.3s;
+  border-radius: 0;
+  margin-bottom: 15px;
+  height: 100%;
+  text-align: center;
+  /* background-color: transparent; */
+  /* background-image: url('https://www.oxpal.com/wp-content/uploads/2014/08/gears_of_war_judgement_-_cover.jpg'); */
+}
+
+
+
+/* .card .card-info .genres{
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+} */
+
+.card .card-info h4{
+  font-family: 'Black Ops One';
+  color: black;
+}
+
+.card .card-info .align{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.card .card-info p{
+  margin-bottom: 0;
+}
+.card .badge{
+  color:white;
+}
+.card-img{
+  height: 100%;
+}
+
+@media (max-width: 576px){
+  .card{
+    flex-direction: row;
+    text-align: left;
+    height: 170px;
+    margin-bottom:5px;
+
+  }
+  .card .card-info .genres{  
+    bottom: 5px;
+  }
+  .card .card-img{
+    flex: 1;
+  }
+
+  .card .card-info .align{
+    position: static;
+    transform: unset;
+  }
+
+  .card-img img {
+    width: 120px!important;
+  }
+
+  .card:hover .card-img img {
+    filter: unset;
+    
+  }
+  .card .card-info{
+    position: static!important;
+    transform: translateY(0)!important;
+    flex: 2;
+    padding: 10px!important;
+    color: #6c757d!important;
+  }
+  .card:hover .card-info{
+    background-color: unset!important;
+  }
+
+}
+
+.card:hover img{
+  filter: blur(2px);
+}
+
+
+.card-head{
+  padding:5px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
+  transition: all 0.3s ease; 
+}
+
+.card:hover .card-info{
+  /* top: 0; */
+  transform: translateY(0);
+  background-color: rgba(255,193,7,.6);
+}
+.card .card-info{
+  /* margin-top: 45px; */
+  position: absolute;
+  transition: all 0.5s ease; 
+  /* -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; */
+  transform: translateY(100%);
+  padding: 5px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+
+.card:hover{
+  box-shadow: 0 0 6px 6px rgba(255,193,7,.5)
+}
+
+
+
+.card .card-info .genres .badge{
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 762px) {
+
+}
+
