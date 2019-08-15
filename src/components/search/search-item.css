@@ -27,12 +27,13 @@
 }
 
 .search-item h4{
+    text-overflow: ellipsis;
     font-family: 'Black Ops One';
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    height: 60px;
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; */
+    white-space: nowrap;
+    /* height: 60px; */
     text-align: center;
     text-align: -webkit-center;
     

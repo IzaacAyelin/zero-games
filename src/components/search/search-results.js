@@ -58,14 +58,16 @@ class SearchResults extends Component {
             this.query({
                 query: `search "${props.title}"`,
                 offset: 0,
-                sort: ''
+                sort: '',
+                limit: 12
             }, false)
         }
         else if (props.genre) {
             this.query({
                 query: `where genres.name = "${props.genre}"`,
                 offset: 0,
-                sort: "sort popularity desc;"
+                sort: "sort popularity desc",
+                limit: 12
             }, false)
         }
     }
@@ -91,14 +93,16 @@ class SearchResults extends Component {
             this.query({
                 query: `where genres.name = "${this.props.genre}"`,
                 offset: 0,
-                sort: "sort popularity desc;"
+                sort: "sort popularity desc",
+                limit: 12
             }, false)
         }
         else if (this.props.consoleId) {
             this.query({
                 query: `where platforms = ${this.props.consoleId}`,
                 offset: 0,
-                sort: "sort popularity desc;"
+                sort: "sort popularity desc",
+                limit: 12
             }, false)
         }
     }
@@ -109,7 +113,7 @@ class SearchResults extends Component {
             <div>
                 <div className="search-results">
                     {this.loading ? <MiniLoader /> :
-                        (this.state.games && this.state.games.map((game) => {
+                        (this.state.games && this.state.games.map((game,index) => {
                             let cover;
                             if (game.cover && game.cover.url) {
                                 cover = `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover.image_id}.jpg`;
@@ -117,7 +121,7 @@ class SearchResults extends Component {
                             else {
                                 cover = noimage;
                             }
-                            return <SearchItem key={game.id} genres={game.genres} game={game} cover={cover} />
+                            return <SearchItem key={game.id+index} genres={game.genres} game={game} cover={cover} />
                         })
                         )
                     }

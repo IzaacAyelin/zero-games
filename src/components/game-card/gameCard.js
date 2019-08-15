@@ -12,6 +12,7 @@ class GameCard extends Component {
     }
 
     calculateRating = () => {
+ 
         let rating = 0;;
         if (this.state.game && this.state.game.total_rating) {
             rating = parseInt((this.state.game.total_rating / 2) / 10);

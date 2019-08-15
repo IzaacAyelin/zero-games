@@ -23,7 +23,7 @@
   font-family: 'Black Ops One';
   color: black;
   overflow: hidden;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  
 }

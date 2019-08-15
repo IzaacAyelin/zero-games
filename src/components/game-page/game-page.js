@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './game-page.css';
 import axios from 'axios';
 import preloader from '../../images/preloader.gif';
+import noImage from '../../images/no-image.jpg';
 
 class GamePage extends Component {
     _isMounted = false;
@@ -79,10 +80,11 @@ class GamePage extends Component {
                         <div className="screenshots">
                             <span>Screenshots:</span><br />
                             {
-                                this.state.game.screenshots.map((image, index) => {
+                               this.state.game.screenshots && this.state.game.screenshots.map((image, index) => {
                                     return <img key={index} src={`https://images.igdb.com/igdb/image/upload/t_screenshot_huge/${image.image_id}.jpg`} alt="Screenshot" />
                                 })
                             }
+                            {!this.state.game.screenshots && <img src={noImage} alt="Screenshot"/>}
                         </div>
                     </div>
                 </div>
